@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/crudapi}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+jwt:
+  secret: ${JWT_SECRET:d58039f8749bc53f851f7e8df6c71c74789f6bea6719b6e3b05329bac52e1bca}
+  expiration: ${JWT_EXPIRATION:360000}
