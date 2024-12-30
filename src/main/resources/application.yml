@@ -3,9 +3,10 @@ spring:
     url: jdbc:postgresql://localhost:5432/crudapi
     username: postgres
     password: postgres
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: validate
 jwt:
-  secret:
+  secret: ${JWT_SECRET:d58039f8749bc53f851f7e8df6c71c74789f6bea6719b6e3b05329bac52e1bca}
   expiration: 360000
